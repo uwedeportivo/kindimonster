@@ -1,0 +1,17 @@
+Dear {{.Recipient}},
+
+{{.Sender}} wants to send you an encrypted file and therefore needs you to upload a kindi certificate to the kindi public key encryption service.
+Please visit .....
+Thanks,
+
+
+{{if len .Note}}
+PS
+
+Here is a note from {{.Sender}}:
+
+{{.Note}}
+
+{{end}}
+
+

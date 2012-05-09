@@ -1,0 +1,24 @@
+<h3>Certificates</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Name</th>
+      <th>Effective</th>
+      <th>Expires</th>
+    </tr>  
+  </thead>
+  <tbody>
+    {{with .Certificates}}
+        {{range .}}
+            <tr>
+            <td><input type="checkbox" value="{{.ID}}"/></td>  
+            <td>{{.Name}}</td>
+            <td>{{.Effective | formatTime}}</td>
+            <td>{{.Expires | formatTime}}</td>
+            </tr>
+        {{end}}
+    {{end}}
+  </tbody>  
+</table>
